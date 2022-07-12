@@ -1,0 +1,18 @@
+2) Write an Assembly Language Program to find square of number using look up table 
+concept
+ORG 0000H
+MOV DPTR,#0500h
+CLR A
+MOVC A,@A+DPTR
+MOV R2,A
+MOV R1,#01H
+CLR A
+LOOP: ADDC A,R1
+INC R1
+INC R1
+DJNZ R2,LOOP
+MOV P1,A
+HERE: SJMP HERE
+org 0500h
+DB 02H
+END
