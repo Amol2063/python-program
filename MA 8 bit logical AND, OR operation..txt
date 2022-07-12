@@ -1,0 +1,15 @@
+3) Write an Assembly Language Program to perform 8 bit logical AND, OR operation.
+Program for Logical AND operation
+ Org 0000h
+ Mov a,#06h
+ Mov b,#03h
+ Anl a,b
+ Mov p1a
+ end
+Program for Logical OR operation
+ Org 0000h
+ Mov a,#0fh
+ Mov b,#03h
+ Orl a,b
+ Mov p2,a
+ End
