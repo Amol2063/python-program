@@ -1,0 +1,13 @@
+8) Write an embedded C program for interfacing of relay with 8051 microcontroller
+#include<reg51.h>
+sbit relay=P1^0;
+void main()
+{
+ unsigned int i;
+ while(1) {
+ relay=1; //Realy ON
+ for(i=0;i<=5000;i++);
+ relay=0; //Relay OFF
+ for(i=0;i<=5000;i++);
+ }
+}

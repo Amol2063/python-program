@@ -1,0 +1,9 @@
+9) Write a program for switch and LED interfacing using proteus VSM simulation 
+software
+org 0000h
+ loop: clr p0.0
+ clr p1.0
+ jb p0.0,next
+ sjmp loop
+ next: setb p1.0
+end

@@ -1,0 +1,11 @@
+4) Write a program blinking of LED using proteus VSM simulation software
+org 0000h
+ loop: setb p1.0
+ acall delay
+ clr p1.0
+ acall delay
+ sjmp loop
+ delay: mov r0,#0ffh
+ here: djnz r0,here
+ ret
+ end

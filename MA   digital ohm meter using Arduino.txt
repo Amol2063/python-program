@@ -1,0 +1,25 @@
+10) Design of digital ohm meter using Arduino
+#include <LiquidCrystal.h>
+const int rs=12,en=11,d4=5,d5,=4,d6=3,d7=2;
+LiquidCrystal lcd(rs,rn,d4,d5,d6,d7);
+float vout=0;
+float R1=220;
+float R2=0;
+int v=0;
+float value=0;
+void setup() {
+ // put your setup code here, to run once:
+lcd.begin(16,2);
+led.print(OHM METER);
+}
+void loop() {
+ // put your main code here, to run repeatedly:
+v=analogRead(A0);
+value=v*5;
+vout=(value)/1024.0;
+R2=R1*(vout/(5-vout));
+lcd.setCursor(0,1);
+lcd.print("R (ohm)= ");
+lcd.print(R2);
+delay(1000);
+}
